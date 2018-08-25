@@ -13,22 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow()
         
         let firstViewController: UIViewController
         
-        if Credential.isUserAuthenticated {
+        if Credential.userIsAuthorized {
             let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
             firstViewController = mainViewController
         } else {
-            guard let authenticationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthenticationViewController") as? AuthenticationViewController else {
+            guard let authorizationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Authorization") as? AuthorizationViewController else {
                 return false
             }
-            authenticationController.delegate = self
-            firstViewController = authenticationController
+            authorizationController.delegate = self
+            firstViewController = authorizationController
         }
         
         self.window?.rootViewController = firstViewController
@@ -38,12 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-extension AppDelegate: AuthenticationViewControllerDelegate {
-    func authenticationViewController(_ viewController: UIViewController, authorizedWith token: String?) {
+extension AppDelegate: AuthorizationViewControllerDelegate {
+    func authorizationViewController(_ viewController: UIViewController, authorizedWith token: String?) {
         Credential.token = token
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
         viewController.present(mainViewController, animated: true, completion: nil)
     }
 }
+
 
 

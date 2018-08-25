@@ -8,44 +8,44 @@
 
 import Foundation
 
-struct User {
+class User {
     
-    let identifier: Int
-    let userName: String
-    let avatarImageURLString: String
-    let fullName: String
+    let id: Int
+    let username: String
+    let profile_picture: String
+    let full_name: String
+    let bio: String?
+    let website: String?
+    let mediaCount: Int
+    let followsCount: Int
+    let followedByCount: Int
     
-    init(identifier: Int, userName: String, avatarImageURLString: String, fullName: String) {
-        self.identifier = identifier
-        self.userName = userName
-        self.avatarImageURLString = avatarImageURLString
-        self.fullName = fullName
+    private var delegate: UserDelegate?
+    
+    convenience init(response: [String:Any], delegate: UserDelegate?) {
+        
+        self.init(response: response)
+        self.delegate = delegate
+        self.delegate?.userCreated(self)
     }
     
-    init(dictionary: [String: Any]) {
+    init(response: [String:Any]) {
         
-        guard
-            let idString = dictionary["id"] as? String,
-            let userName = dictionary["username"] as? String,
-            let avatarUrl = dictionary["profile_picture"] as? String,
-            let fullName = dictionary["full_name"] as? String
-            else
-        {
-            self.init(identifier: 0, userName: "", avatarImageURLString: "", fullName: "")
-            return
+        id = Int(response["id"] as! String)!
+        username = response["username"] as! String
+        profile_picture = response["profile_picture"] as! String
+        full_name = response["full_name"] as! String
+        bio = response["bio"] as? String
+        website = response["website"] as? String
+        
+        if let counts = response["counts"] as? [String:Int] {
+            mediaCount = counts["media"]!
+            followsCount = counts["follows"]!
+            followedByCount = counts["followed_by"]!
+        } else {
+            mediaCount = 0
+            followsCount = 0
+            followedByCount = 0
         }
-        
-        guard let id = Int(idString) else {
-            self.init(identifier: 0, userName: "", avatarImageURLString: "", fullName: "")
-            return
-        }
-        
-        self.init(
-            identifier: id,
-            userName: userName,
-            avatarImageURLString: avatarUrl,
-            fullName: fullName
-        )
     }
-    
 }

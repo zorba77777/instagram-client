@@ -9,19 +9,19 @@
 import UIKit
 import WebKit
 
-class AuthenticationViewController: UIViewController {
+class AuthorizationViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: WKWebView!
-    
-    weak var delegate: AuthenticationViewControllerDelegate?
+    weak var delegate: AuthorizationViewControllerDelegate?
     
     let clientId = "a3444926a0bb4c1e9470aaa84e3a0c62"
-    let redirectURI = "https://www.instagram.com"
+    let redirectUri = "https://www.instagram.com"
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlUnwrapped = URL(string: "https://api.instagram.com/oauth/authorize/?client_id=\(clientId)&redirect_uri=\(redirectURI)&response_type=token")
+        let urlUnwrapped = URL(string: "https://api.instagram.com/oauth/authorize/?client_id=\(clientId)&scope=public_content+follower_list+relationships+comments+likes&redirect_uri=\(redirectUri)&response_type=token")
         
         guard let url = urlUnwrapped else { return }
         
@@ -39,11 +39,13 @@ class AuthenticationViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
-extension AuthenticationViewController: WKNavigationDelegate {
+extension AuthorizationViewController: WKNavigationDelegate {
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
         guard let urlString =  navigationAction.request.url?.absoluteString else {
             decisionHandler(.allow)
             return
@@ -56,7 +58,7 @@ extension AuthenticationViewController: WKNavigationDelegate {
         
         guard let accessToken = urlString.components(separatedBy: "#access_token=").last else { return }
         
-        self.delegate?.authenticationViewController(self, authorizedWith: accessToken)
+        self.delegate?.authorizationViewController(self, authorizedWith: accessToken)
         
         decisionHandler(.cancel)
         
