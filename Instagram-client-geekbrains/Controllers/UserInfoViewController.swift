@@ -13,12 +13,14 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var photo: UIImageView!
     
+    let dataProvider = UserInfoDataProvider(urlRequestType: .userSelf)
+    
     let imageDownloader = ImageFetchHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        APIManager.shared.getUser() {
+        dataProvider.getUserSelf() {
             [unowned self]
             userUnwrapped in
             guard let user = userUnwrapped else {return}
@@ -30,9 +32,5 @@ class UserInfoViewController: UIViewController {
         }
         
     }
-    
-
-
-
 
 }
