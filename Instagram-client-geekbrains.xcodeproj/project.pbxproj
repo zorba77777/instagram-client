@@ -16,18 +16,13 @@
 		2408F134212A0B740069D9A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408F133212A0B740069D9A0 /* MainViewController.swift */; };
 		2408F13A212A13650069D9A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408F139212A13650069D9A0 /* User.swift */; };
 		2408F13D212A1CAD0069D9A0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408F13C212A1CAD0069D9A0 /* APIManager.swift */; };
-		24431B3E2134767C00EB2573 /* URLStringConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24431B3D2134767C00EB2573 /* URLStringConstructor.swift */; };
-		24431B412134920000EB2573 /* UserInfoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24431B402134920000EB2573 /* UserInfoDataProvider.swift */; };
-		24431B44213499C700EB2573 /* PublicationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24431B43213499C700EB2573 /* PublicationDataProvider.swift */; };
-		24431B46213499E300EB2573 /* SearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24431B45213499E300EB2573 /* SearchDataProvider.swift */; };
-		24431B4821349ADC00EB2573 /* AbstractDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24431B4721349ADC00EB2573 /* AbstractDataProvider.swift */; };
-		24431B4B2134A7EF00EB2573 /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24431B4A2134A7EF00EB2573 /* UserDelegate.swift */; };
 		24667E8A2130C73300874A2A /* AuthorizationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E892130C73300874A2A /* AuthorizationViewControllerDelegate.swift */; };
 		24667E8C2130DA6F00874A2A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E8B2130DA6F00874A2A /* Photo.swift */; };
 		24667E8E2130DA7E00874A2A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E8D2130DA7E00874A2A /* Tag.swift */; };
+		24667E902130E92F00874A2A /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E8F2130E92F00874A2A /* UserDelegate.swift */; };
 		24667E922130EB1D00874A2A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E912130EB1D00874A2A /* UserInfoViewController.swift */; };
 		24667E942130FAA500874A2A /* ImageFetchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E932130FAA500874A2A /* ImageFetchHelper.swift */; };
-		246FFEDF2130FD6200E1089C /* RecentPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFEDE2130FD6200E1089C /* RecentPhotoViewController.swift */; };
+		246FFEDF2130FD6200E1089C /* LastPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFEDE2130FD6200E1089C /* LastPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,18 +37,13 @@
 		2408F133212A0B740069D9A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2408F139212A13650069D9A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2408F13C212A1CAD0069D9A0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		24431B3D2134767C00EB2573 /* URLStringConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStringConstructor.swift; sourceTree = "<group>"; };
-		24431B402134920000EB2573 /* UserInfoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDataProvider.swift; sourceTree = "<group>"; };
-		24431B43213499C700EB2573 /* PublicationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationDataProvider.swift; sourceTree = "<group>"; };
-		24431B45213499E300EB2573 /* SearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataProvider.swift; sourceTree = "<group>"; };
-		24431B4721349ADC00EB2573 /* AbstractDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractDataProvider.swift; sourceTree = "<group>"; };
-		24431B4A2134A7EF00EB2573 /* UserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
 		24667E892130C73300874A2A /* AuthorizationViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewControllerDelegate.swift; sourceTree = "<group>"; };
 		24667E8B2130DA6F00874A2A /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		24667E8D2130DA7E00874A2A /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		24667E8F2130E92F00874A2A /* UserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
 		24667E912130EB1D00874A2A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		24667E932130FAA500874A2A /* ImageFetchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetchHelper.swift; sourceTree = "<group>"; };
-		246FFEDE2130FD6200E1089C /* RecentPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotoViewController.swift; sourceTree = "<group>"; };
+		246FFEDE2130FD6200E1089C /* LastPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +76,7 @@
 		2408F11A2129F8E20069D9A0 /* Instagram-client-geekbrains */ = {
 			isa = PBXGroup;
 			children = (
-				24431B3F2134911700EB2573 /* DataProviders */,
-				2408F13B212A1C9A0069D9A0 /* ApiInstruments */,
+				2408F13B212A1C9A0069D9A0 /* API */,
 				2408F138212A13530069D9A0 /* Models */,
 				2408F130212A0A2E0069D9A0 /* Utilites */,
 				2408F12D2129F9A30069D9A0 /* Controllers */,
@@ -106,7 +95,7 @@
 				2408F135212A12390069D9A0 /* Authentication */,
 				2408F133212A0B740069D9A0 /* MainViewController.swift */,
 				24667E912130EB1D00874A2A /* UserInfoViewController.swift */,
-				246FFEDE2130FD6200E1089C /* RecentPhotoViewController.swift */,
+				246FFEDE2130FD6200E1089C /* LastPhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,49 +120,21 @@
 		2408F138212A13530069D9A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				24431B492134A66800EB2573 /* Helpers */,
-				24431B422134926800EB2573 /* JSONDeserializers */,
-				24431B4A2134A7EF00EB2573 /* UserDelegate.swift */,
+				2408F139212A13650069D9A0 /* User.swift */,
+				24667E8B2130DA6F00874A2A /* Photo.swift */,
+				24667E8D2130DA7E00874A2A /* Tag.swift */,
+				24667E8F2130E92F00874A2A /* UserDelegate.swift */,
+				24667E932130FAA500874A2A /* ImageFetchHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2408F13B212A1C9A0069D9A0 /* ApiInstruments */ = {
+		2408F13B212A1C9A0069D9A0 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				2408F13C212A1CAD0069D9A0 /* APIManager.swift */,
-				24431B3D2134767C00EB2573 /* URLStringConstructor.swift */,
 			);
-			path = ApiInstruments;
-			sourceTree = "<group>";
-		};
-		24431B3F2134911700EB2573 /* DataProviders */ = {
-			isa = PBXGroup;
-			children = (
-				24431B4721349ADC00EB2573 /* AbstractDataProvider.swift */,
-				24431B402134920000EB2573 /* UserInfoDataProvider.swift */,
-				24431B43213499C700EB2573 /* PublicationDataProvider.swift */,
-				24431B45213499E300EB2573 /* SearchDataProvider.swift */,
-			);
-			path = DataProviders;
-			sourceTree = "<group>";
-		};
-		24431B422134926800EB2573 /* JSONDeserializers */ = {
-			isa = PBXGroup;
-			children = (
-				24667E8D2130DA7E00874A2A /* Tag.swift */,
-				24667E8B2130DA6F00874A2A /* Photo.swift */,
-				2408F139212A13650069D9A0 /* User.swift */,
-			);
-			path = JSONDeserializers;
-			sourceTree = "<group>";
-		};
-		24431B492134A66800EB2573 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				24667E932130FAA500874A2A /* ImageFetchHelper.swift */,
-			);
-			path = Helpers;
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,24 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24431B3E2134767C00EB2573 /* URLStringConstructor.swift in Sources */,
-				24431B46213499E300EB2573 /* SearchDataProvider.swift in Sources */,
 				24667E8C2130DA6F00874A2A /* Photo.swift in Sources */,
-				24431B4B2134A7EF00EB2573 /* UserDelegate.swift in Sources */,
 				2408F12F2129F9DB0069D9A0 /* AuthorizationViewController.swift in Sources */,
-				24431B412134920000EB2573 /* UserInfoDataProvider.swift in Sources */,
-				246FFEDF2130FD6200E1089C /* RecentPhotoViewController.swift in Sources */,
+				246FFEDF2130FD6200E1089C /* LastPhotoViewController.swift in Sources */,
 				24667E942130FAA500874A2A /* ImageFetchHelper.swift in Sources */,
 				2408F13A212A13650069D9A0 /* User.swift in Sources */,
-				24431B44213499C700EB2573 /* PublicationDataProvider.swift in Sources */,
 				2408F132212A0A560069D9A0 /* Credential.swift in Sources */,
-				24431B4821349ADC00EB2573 /* AbstractDataProvider.swift in Sources */,
 				2408F11C2129F8E30069D9A0 /* AppDelegate.swift in Sources */,
 				24667E922130EB1D00874A2A /* UserInfoViewController.swift in Sources */,
 				2408F134212A0B740069D9A0 /* MainViewController.swift in Sources */,
 				24667E8E2130DA7E00874A2A /* Tag.swift in Sources */,
 				24667E8A2130C73300874A2A /* AuthorizationViewControllerDelegate.swift in Sources */,
 				2408F13D212A1CAD0069D9A0 /* APIManager.swift in Sources */,
+				24667E902130E92F00874A2A /* UserDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

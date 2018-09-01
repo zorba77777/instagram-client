@@ -9,16 +9,10 @@
 import UIKit
 
 class MainViewController: UIViewController, UserDelegate {
-    
     @IBOutlet weak var userNameLabel: UILabel!
-    
-    let dataProvider = UserInfoDataProvider(urlRequestType: .userSelf)
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        dataProvider.getUserSelf() {
+        APIManager.shared.getUser() {
             [unowned self]
             userUnwrapped in
             guard let user = userUnwrapped else {return}
