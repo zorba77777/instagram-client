@@ -12,12 +12,13 @@ import UIKit
 
 class ImageFetchHelper {
     
-    func getImageData(urlString: String) -> UIImage? {
+    func getImage(urlString: String) -> UIImage? {
         
         guard let url = URL(string: urlString) else {
             print("Something went wrong with image url")
             return nil
         }
+        
         guard let data = try? Data(contentsOf: url) else {
             print("Something went wrong with image data")
             return nil

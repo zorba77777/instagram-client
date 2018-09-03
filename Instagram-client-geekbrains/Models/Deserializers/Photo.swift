@@ -11,7 +11,7 @@ import Foundation
 class Photo {
     
     let id: String
-    let user: User
+    let user: SenderPhoto
     let width: Int
     let height: Int
     let url: String
@@ -24,7 +24,8 @@ class Photo {
     init(response: [String:Any]) {
         
         id = response["id"] as! String
-        user = User(response: response["user"] as! [String : Any])
+        let user = User(response: response["user"] as! [String : Any])
+        self.user = SenderPhoto(owner: user)
         let image = (response["images"] as! [String:Any])["standard_resolution"] as! [String:Any]
         width = image["width"] as! Int
         height = image["height"] as! Int
@@ -36,3 +37,6 @@ class Photo {
         captionSender = ((response["caption"] as? [String:Any])?["from"] as? [String:Any])?["username"] as? String
     }
 }
+
+
+

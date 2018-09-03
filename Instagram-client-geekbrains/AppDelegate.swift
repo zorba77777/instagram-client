@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow()
-        
+
         let firstViewController: UIViewController
-        
+
         if Credential.userIsAuthorized {
-            let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
+            let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
             firstViewController = mainViewController
         } else {
             guard let authorizationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Authorization") as? AuthorizationViewController else {
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             authorizationController.delegate = self
             firstViewController = authorizationController
         }
-        
+
         self.window?.rootViewController = firstViewController
         self.window?.makeKeyAndVisible()
         return true
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: AuthorizationViewControllerDelegate {
     func authorizationViewController(_ viewController: UIViewController, authorizedWith token: String?) {
         Credential.token = token
-        let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
+        let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
         viewController.present(mainViewController, animated: true, completion: nil)
     }
 }

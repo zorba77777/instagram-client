@@ -53,6 +53,7 @@ extension AuthorizationViewController: WKNavigationDelegate {
         
         guard urlString.range(of: "#access_token") != nil else {
             decisionHandler(.allow)
+           
             return
         }
         
@@ -63,4 +64,5 @@ extension AuthorizationViewController: WKNavigationDelegate {
         decisionHandler(.cancel)
         
     }
+    
 }

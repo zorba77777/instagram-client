@@ -8,21 +8,27 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UserDelegate {
-    @IBOutlet weak var userNameLabel: UILabel!
+class MainViewController: UIViewController {
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var photo: UIImageView!
+    
+    let imageDownloader = ImageFetchHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         APIManager.shared.getUser() {
             [unowned self]
             userUnwrapped in
             guard let user = userUnwrapped else {return}
-            self.userCreated(user)
+            guard let image = self.imageDownloader.getImage(urlString: user.profile_picture) else {return}
+            DispatchQueue.main.async {
+                self.name.text = user.full_name
+                self.photo.image = image
+            }
         }
+        
     }
-   
-    func userCreated(_ user: User) {
-        DispatchQueue.main.async {
-            self.userNameLabel.text = user.username
-        }
-    }
+    
 }
