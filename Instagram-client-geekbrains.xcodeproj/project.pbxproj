@@ -24,6 +24,9 @@
 		24667E8E2130DA7E00874A2A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E8D2130DA7E00874A2A /* Tag.swift */; };
 		24667E902130E92F00874A2A /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E8F2130E92F00874A2A /* UserDelegate.swift */; };
 		24667E942130FAA500874A2A /* ImageFetchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24667E932130FAA500874A2A /* ImageFetchHelper.swift */; };
+		24766B8A21431AB700C181AA /* TagPhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24766B8921431AB700C181AA /* TagPhotosTableViewController.swift */; };
+		24766B8C21431B8E00C181AA /* PhotoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24766B8B21431B8E00C181AA /* PhotoTableCell.swift */; };
+		24766B8E214351AD00C181AA /* PublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24766B8D214351AD00C181AA /* PublicationViewController.swift */; };
 		24ADB5C8213C4DF400DA15B2 /* TagDBDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB5C7213C4DF400DA15B2 /* TagDBDataModel.swift */; };
 		24ADB5CA213DC34700DA15B2 /* TagsLoadFromRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB5C9213DC34700DA15B2 /* TagsLoadFromRealm.swift */; };
 		24BAA19B213B888D00C36154 /* SearchTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BAA19A213B888D00C36154 /* SearchTagViewController.swift */; };
@@ -49,6 +52,9 @@
 		24667E8D2130DA7E00874A2A /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		24667E8F2130E92F00874A2A /* UserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
 		24667E932130FAA500874A2A /* ImageFetchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetchHelper.swift; sourceTree = "<group>"; };
+		24766B8921431AB700C181AA /* TagPhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPhotosTableViewController.swift; sourceTree = "<group>"; };
+		24766B8B21431B8E00C181AA /* PhotoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableCell.swift; sourceTree = "<group>"; };
+		24766B8D214351AD00C181AA /* PublicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationViewController.swift; sourceTree = "<group>"; };
 		24ADB5C7213C4DF400DA15B2 /* TagDBDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDBDataModel.swift; sourceTree = "<group>"; };
 		24ADB5C9213DC34700DA15B2 /* TagsLoadFromRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsLoadFromRealm.swift; sourceTree = "<group>"; };
 		24BAA19A213B888D00C36154 /* SearchTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTagViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,9 @@
 				2408F135212A12390069D9A0 /* Authentication */,
 				2408F133212A0B740069D9A0 /* MainViewController.swift */,
 				24BAA19A213B888D00C36154 /* SearchTagViewController.swift */,
+				24766B8921431AB700C181AA /* TagPhotosTableViewController.swift */,
+				24766B8B21431B8E00C181AA /* PhotoTableCell.swift */,
+				24766B8D214351AD00C181AA /* PublicationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 				24BAA19B213B888D00C36154 /* SearchTagViewController.swift in Sources */,
 				24667E8C2130DA6F00874A2A /* Photo.swift in Sources */,
 				2400A871213B601800D000DC /* UserPhoto.swift in Sources */,
+				24766B8E214351AD00C181AA /* PublicationViewController.swift in Sources */,
 				2408F12F2129F9DB0069D9A0 /* AuthorizationViewController.swift in Sources */,
 				24ADB5CA213DC34700DA15B2 /* TagsLoadFromRealm.swift in Sources */,
 				24667E942130FAA500874A2A /* ImageFetchHelper.swift in Sources */,
@@ -353,11 +363,13 @@
 				2408F134212A0B740069D9A0 /* MainViewController.swift in Sources */,
 				24667E8E2130DA7E00874A2A /* Tag.swift in Sources */,
 				24667E8A2130C73300874A2A /* AuthorizationViewControllerDelegate.swift in Sources */,
+				24766B8C21431B8E00C181AA /* PhotoTableCell.swift in Sources */,
 				24ADB5C8213C4DF400DA15B2 /* TagDBDataModel.swift in Sources */,
 				2408F13D212A1CAD0069D9A0 /* APIManager.swift in Sources */,
 				24667E902130E92F00874A2A /* UserDelegate.swift in Sources */,
 				2400A873213B605700D000DC /* SenderPhoto.swift in Sources */,
 				24FF5830213DCCB70046B320 /* TagsWriteToRealm.swift in Sources */,
+				24766B8A21431AB700C181AA /* TagPhotosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

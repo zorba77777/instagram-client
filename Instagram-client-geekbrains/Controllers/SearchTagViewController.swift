@@ -22,7 +22,6 @@ class SearchTagViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configure()
-        
     }
 
     @objc func searchTags() {
@@ -105,6 +104,25 @@ class SearchTagViewController: UITableViewController {
         return tags.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        self.performSegue(withIdentifier: "showPublications", sender: cell)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showPublications" {
+            
+            guard let cell = sender as? UITableViewCell else { return }
+            
+            guard let index = self.tableView.indexPath(for: cell)?.row else { return }
+            
+            guard let publicationController = segue.destination as? TagPhotosTableViewController else { return }
+           
+            publicationController.tag = self.tags[index]
+            
+        }
+    }
     
 }
